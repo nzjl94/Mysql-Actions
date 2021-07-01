@@ -1,0 +1,13 @@
+1- search for 'local_admin' word replaced with your current databse username 
+    (
+        A- you can use any editor.
+        B- or use this command inside command line  [ cat supermarket.sql | sed 's#local_admin#new_user#' ]
+    )
+2- import the databse to your databae
+    A- create a new databse with any name.
+    B- use this collection [utf8mb4_0900_ai_ci] or if you don't have this collection please replaced with this one [utf8mb4_general_ci] [the same as ponit 1]
+    C- import the supermarket.sql file into new database
+        Z- you can use phpmyadmin [
+                go to inside new database you created in step A ==> go to Import ==> Click on Choose File ==> upload sql file ==> click GO
+            ]
+        Y- command line, use this command [mysql -u user_name -p database_name < supermarket.sql ]
